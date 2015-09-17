@@ -1,0 +1,768 @@
+/*
+* Simple Zen skin
+*
+* This version by Foppe Hemminga - http://www.blog.hemminga.net/
+* Licence: GPL2/3
+* Skin for B2evolution v 2.x- http://www.b2evolution.net/
+*
+*
+* Original Copyright information:
+* Theme Name: SimpleZEN WS
+* Theme URI: http://www.wpskins.org/themes/1654/Simple-Zen/
+* Description: A clean, Adsense-optimized 3 column theme
+* Version: 0.1
+* Author: Maki
+* Author URI: http://www.wpskins.org/author.php?id=maki
+* Licence: GPL
+*
+*/
+
+/* Begin Typography & Colors */
+body {
+	font-size: 62.5%; /* Resets 1em to 10px */
+	font-family: 'trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+
+}
+
+#page {
+	background-color: white;
+	/* border: 1px solid #959596; */
+
+}
+
+
+#content {
+	clear: both;
+	font-size: 1.2em
+}
+
+ul, li, ul li {
+	list-style-type: none;
+	padding-left: 0;
+	margin-left: 0;
+}
+
+.narrowcolumn .bText,
+.widecolumn .bText {
+	line-height: 1.4em;
+}
+
+.narrowcolumn .postmetadata {
+	text-align: center;
+}
+
+.alt {
+	background-color: #f8f8f8;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+
+#footer {
+	border: none;
+}
+
+small {
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 0.9em;
+	line-height: 1.5em;
+}
+
+h1,
+h2,
+h3 {
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	font-weight: bold;
+}
+
+.widget_core_coll_title h1 {
+	font-size: 5em;
+	margin: 0 0 0 500px;
+}
+.widget_core_coll_tagline {
+	font-size: 2em;
+	margin: 0 0 0 500px;
+	color: white;
+}
+
+h2.evo_post_title {
+	font-size: 28px;
+	text-align: left;
+	padding: 0 0 0 5px;
+	color: black;
+}
+
+h2 {
+	font-size: 1.6em;
+}
+
+h2.pagetitle {
+	font-size: 1.6em;
+}
+
+/* #sidebar h2, #sidebar_2 h2 {
+	font-family: 'trebuchet MS', 'Lucida Grande', Verdana, Sans-Serif;
+	font-size: 1.2em;
+} */
+
+h3 {
+	font-size: 1.3em;
+}
+
+h1,
+h1 a,
+h1 a:hover,
+h1 a:visited {
+	text-decoration: none;
+	color: white;
+}
+
+h2,
+h2 a,
+h2 a:visited,
+h3,
+h3 a,
+h3 a:visited {
+	color: #333;
+}
+
+h2,
+h2 a,
+h2 a:hover,
+h2 a:visited,
+h3,
+h3 a,
+h3 a:hover,
+h3 a:visited,
+#sidebar h2,
+#sidebar_2 h2,
+.bCalendarTable caption,
+cite {
+	text-decoration: none;
+}
+
+.bText p a:visited {
+	color: #b85b5a;
+}
+
+#sidebar, #sidebar_2 {
+	font: 1.4em 'trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	text-align: left;
+}
+
+/*
+small, #sidebar ul ul li,
+#sidebar ul ol li,
+#sidebar_2 ul ul li,
+#sidebar_2 ul ol li,
+.nocomments,
+.postmetadata,
+blockquote,
+strike {
+	color: #777;
+}
+*/
+
+code {
+	font: 1.1em 'Courier New', Courier, Fixed;
+}
+
+acronym, abbr, span.caps
+{
+	font-size: 0.9em;
+	letter-spacing: .07em;
+}
+
+a,
+h2 a:hover,
+h3 a:hover {
+	color: #06c;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #147;
+	text-decoration: underline;
+}
+
+/* End Typography & Colors */
+
+
+
+/* Begin Structure */
+body {
+	margin: 0 0 20px 0;
+	padding: 0;
+	text-align: center;
+}
+
+#page {
+	background-image: url(img/bg.jpg);
+	background-repeat: repeat-x;
+	background-position: left top;
+	padding: 0;
+	text-align: left;
+}
+
+#wrapper{
+	width: 1000px;
+	text-align: left;
+	margin: auto;
+}
+
+#header {
+	margin: 0 1px 0 1px;
+	padding: 0;
+	height: 220px;
+}
+
+#headerimg {
+	background: transparent url('img/headerimg.jpg') no-repeat center 15px;
+	margin: 0;
+	height: 180px;
+	width: 100%;
+}
+
+.widget_core_colls_list_public, .blog_list {
+	height: 53px;
+	overflow: hidden;
+	font-size: 14px;
+	text-transform:uppercase;
+	font-weight: bold;
+}
+
+.widget_core_colls_list_public ul {
+
+}
+
+.widget_core_colls_list_public li, .blog_list a {
+	list-style: none;
+	float: left;
+}
+
+.widget_core_colls_list_public a, .blog_list a {
+	padding: 20px 10px;
+	display: block;
+	text-decoration: none;
+	color: #A3AEBA;
+}
+
+.widget_core_colls_list_public a:hover, .blog_list a:hover {
+	background-color: #4e607b;
+	color: #fff;
+
+}
+
+.widget_core_colls_list_public .selected, .blog_list a.selected {
+	background-color: #544A65;
+}
+
+/**
+ * Top menu
+ * This is the menu below the image header bar
+ **/
+div.top_menu {
+	padding-top: 7px;
+	height: 30px;
+	float: left;
+	width: 100%;
+	clear: both;
+	display: block;
+	/*overflow: hidden;*/
+}
+
+div.top_menu ul {
+	float:left;
+	margin: 0 10px;
+	padding: 0;
+	list-style-type:none;
+	padding: 4px 0 8px 0;
+	font-size: 120%;
+}
+
+div.top_menu h3 {
+	display: none;
+}
+
+div.top_menu ul li {
+	display: inline;
+	list-style: none;
+	float: left;
+	padding-top: 2px;
+	padding: 0 1ex 0 0;
+}
+
+#header .top_menu a {
+	font-style: normal;
+	font-size: 140%;
+	font-weight: bold;
+	color: #0066D9;
+}
+
+.narrowcolumn {
+	float: left;
+	padding: 0 0 20px 0px;
+	margin: 0px 40px 0 0;
+	width: 620px;
+}
+
+div.clear {
+	width: 100%;
+	clear: both;
+	display: block;
+	border: 1px red solid;
+}
+
+.widecolumn {
+	float: left;
+	padding: 0 0 20px 0px;
+	margin: 0px 40px 0 0;
+	width: 700px;
+}
+
+.post {
+	margin: 0 0 40px;
+	text-align: justify;
+	clear: both;
+}
+
+.post h2 {
+	border-bottom: 1px solid #43637B;
+	letter-spacing: -1px;
+	text-align: left;
+}
+
+.bText {
+	float: right;
+	width: 450px;
+	padding: 10px 0px 5px 0px;
+}
+
+.bText p {
+	line-height: 150%;
+	padding: 0px 0px 7px 0px;
+	text-align: justify;
+	font-size: 13px;
+}
+
+.post hr {
+	display: block;
+}
+
+.metadata {
+	background: url( "img/tag_blue.png" ) no-repeat center left;
+	clear: both;
+	border-top: 1px dotted #DEDEDE;
+	border-bottom: 1px solid #5383BA;
+	padding: 5px 0 5px 10px;
+}
+
+.narrowcolumn .postmetadata {
+	padding-top: 5px;
+}
+
+.postmetadata {
+	clear: left;
+	width: 150px;
+}
+
+.alt {
+	width: 200px;
+}
+
+.posttags {
+	clear: both;
+	text-align: center;
+	color: #777;
+}
+
+#sidebar {
+	margin-top: 15px;
+	float: left;
+	width: 170px;
+}
+
+#sidebar_2 {
+	margin-top: 15px;
+	width: 140px;
+	float: right;
+}
+
+#footer {
+	padding: 0;
+	margin: 0 auto;
+	width: 1000px;
+	clear: both;
+}
+
+#footer p {
+	margin: 0;
+	padding: 0 0 20px;
+	text-align: center;
+}
+/* End Structure */
+
+
+/* Begin Lists
+
+Special stylized non-IE bullets
+Do not work in Internet Explorer, which merely default to normal bullets. */
+
+html>body .bText ul {
+	margin-left: 0px;
+	padding: 0 0 0 30px;
+	list-style: none;
+	padding-left: 10px;
+	text-indent: -10px;
+}
+
+html>body .bText li {
+	margin: 7px 0 8px 10px;
+}
+
+.bText ul li:before {
+	content: "\00BB \0020";
+}
+
+.bText ol {
+	padding: 0 0 0 35px;
+	margin: 0;
+}
+
+.bText ol li {
+	margin: 0;
+	padding: 0;
+}
+
+.postmetadata ul {
+	padding: 5px;
+	text-align: left;
+}
+
+.postmetadata li {
+	list-style: none;
+	border-bottom: 1px dotted #AAAAAA;
+	margin: 4px 0px;
+}
+
+.postmetadata .author {
+	background: url( "img/user.png" ) no-repeat;
+	padding: 0 0 0 20px;
+}
+
+.postmetadata .date {
+	background: url( "img/calendar.png" ) no-repeat;
+	padding: 0 0 0 20px;
+}
+
+.postmetadata .category {
+	background: url( "img/folder.png" ) no-repeat;
+	padding: 0 0 0 20px;
+}
+
+.postmetadata .feedback {
+	background: url( "img/comment.png" ) no-repeat;
+	padding: 0 0 0 20px;
+}
+
+.postmetadata .views {
+	background: url( "img/icon_looking_glass.png" ) no-repeat;
+	padding: 0 0 0 20px;
+}
+
+#sidebar .widget_core_coll_common_links ul li,
+#sidebar_2 .widget_core_coll_common_links ul li,
+#sidebar .widget_plugin_evo_Arch ul li,
+#sidebar_2 .widget_plugin_evo_Arch ul li {
+	text-align: left;
+	list-style-type: none;
+	border-bottom: 1px dotted #5383BA;
+	margin: 0px 0px 3px 0px;
+}
+
+#sidebar li.widget_core_coll_category_list ul li,
+#sidebar_2 li.widget_core_coll_category_list ul li {
+	text-align: left;
+	list-style-type: none;
+	border-bottom: 1px dotted #5383BA;
+	margin: 0px 0px 3px 0px;
+}
+
+#sidebar li.widget_core_coll_category_list ul li ul li,
+#sidebar_2 li.widget_core_coll_category_list ul li ul li {
+	text-align: left;
+	list-style-type: none;
+	border-bottom: none;
+	margin: 0px 0px 3px 0px;
+}
+
+#sidebar li.widget_core_coll_category_list,
+#sidebar_2 li.widget_core_coll_category_list {
+	text-align: left;
+	list-style-type: none;
+	border-bottom: none;
+	margin: 0px 0px 3px 0px;
+}
+
+
+#sidebar .widget_core_linkblog ul li ul li,
+#sidebar_2 .widget_core_linkblog ul li ul li {
+	text-align: left;
+	list-style-type: none;
+	border-bottom: 1px dotted #5383BA;
+	margin: 0px 0px 3px 0px;
+}
+
+#sidebar .widget_core_coll_xml_feeds ul li,
+#sidebar .widget_core_coll_comment_list ul li,
+#sidebar .notes,
+#sidebar_2 .widget_core_coll_xml_feeds ul li,
+#sidebar_2 .widget_core_coll_comment_list ul li,
+#sidebar_2 .notes {
+	text-align: left;
+	list-style-type: none;
+	border-bottom: 1px dotted #5383BA;
+	margin: 0px 0px 3px 0px;
+}
+
+#sidebar .widget_core_coll_post_list ul li,
+#sidebar_2 .widget_core_coll_post_list ul li,
+#sidebar .widget_core_colls_list_public ul li,
+#sidebar_2 .widget_core_colls_list_public ul li,
+#sidebar .widget_core_colls_list_owner ul li,
+#sidebar_2 .widget_core_colls_list_owner ul li {
+	text-align: left;
+	list-style-type: none;
+	border-bottom: 1px dotted #5383BA;
+	margin: 0px 0px 3px 0px;
+}
+
+#sidebar .widget_core_menu_link ul li,
+#sidebar_2 .widget_core_menu_link ul li {
+	text-align: left;
+	list-style-type: none;
+	border-bottom: 1px dotted #5383BA;
+	margin: 0px 0px 3px 0px;
+}
+
+#sidebar .widget_core_user_tools ul li,
+#sidebar_2 .widget_core_user_tools ul li {
+	text-align: left;
+	list-style-type: none;
+	border-bottom: 1px dotted #5383BA;
+	margin: 0px 0px 3px 0px;
+}
+
+#sidebar ul ol,
+#sidebar_2 ul ol {
+	text-align: left;
+	list-style-type: none;
+	border-bottom: 1px dotted #5383BA;
+	margin: 0px 0px 3px 0px;
+}
+
+#sidebar ul li,
+#sidebar_2 ul li  {
+	list-style-type: none;
+	list-style-image: none;
+	margin-bottom: 15px;
+}
+
+#sidebar ul p,
+#sidebar ul select,
+#sidebar_2 ul p, #sidebar_2 ul select  {
+	margin: 5px 0 8px;
+}
+
+#sidebar ul ul, #sidebar ul ol,
+#sidebar_2 ul ul, #sidebar_2 ul ol  {
+	margin: 5px 0 0 0px;
+}
+
+ol li, #sidebar ul ol li,
+#sidebar_2 ul ol li {
+	list-style: decimal outside;
+}
+
+#sidebar ul ul li,
+#sidebar ul ol li,
+#sidebar_2 ul ul li,
+#sidebar_2 ul ol li  {
+	margin: 3px 0 0;
+	padding: 0;
+}
+/* End bText Lists */
+
+/*	Begin Headers */
+h1 {
+	padding-top: 30px;
+	margin: 0;
+}
+
+h2 {
+	margin: 30px 0 0;
+}
+
+h2.pagetitle {
+	margin-top: 30px;
+	text-align: center;
+}
+
+#sidebar h2,
+#sidebar_2 h2 {
+	font-weight: normal;
+	font-size: 16px;
+	border-bottom: 1px solid #4E637B;
+	text-align: right;
+	text-transform: uppercase;
+	line-height: 20px;
+	margin-bottom: 10px;
+
+}
+
+h3 {
+	padding: 0;
+	margin: 30px 0 0;
+}
+
+
+/* End Headers */
+
+/* Begin Images */
+p img {
+	padding: 0;
+	max-width: 100%;
+}
+
+/*	Using 'class="alignright"' on an image will (who would've
+thought?!) align the image to the right. And using 'class="centered',
+will of course center the image. This is much better than using
+align="center", being much more futureproof (and valid) */
+
+img.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+img.alignright {
+	padding: 4px;
+	margin: 0 0 2px 7px;
+	display: inline;
+}
+
+img.alignleft {
+	padding: 4px;
+	margin: 0 7px 2px 0;
+	display: inline;
+}
+
+.alignright {
+	float: right;
+}
+
+.alignleft {
+	float: left
+}
+/* End Images */
+
+
+/* Begin Sidebar */
+#sidebar form, #sidebar_2 form {
+	margin: 0;
+}
+
+
+#sidebar .note, #sidebar .notes,
+	#sidebar_2 .note, #sidebar_2 .notes  {
+	margin-top: 1ex;
+	font-size: 100%;
+}
+
+.widget_plugin_evo_Calr {
+	padding-top: 10px;
+}
+
+table.bCalendarTable {
+	font-size: 80%;
+	width: 100%;
+}
+
+table.bCalendarTable caption {
+	font-family: 'trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	font-weight: normal;
+	font-size: 16px;
+	border-bottom: 1px solid #4E637B;
+	text-align: right;
+	text-transform: uppercase;
+	line-height: 20px;
+	margin-bottom: 10px;
+}
+table.bCalendarTable th {
+	font-size: 70%;
+}
+
+input.SearchField {
+	width: 160px;
+	padding: 2px;
+}
+/* End Sidebar */
+
+/* Begin Various Tags & Classes */
+acronym,
+abbr,
+span.caps {
+	cursor: help;
+}
+
+acronym,
+abbr {
+	border-bottom: 1px dashed #999;
+}
+
+blockquote {
+	margin: 15px 30px 0 10px;
+	padding-left: 20px;
+	border-left: 5px solid #ddd;
+}
+
+blockquote cite {
+	margin: 5px 0 0;
+	display: block;
+}
+
+.center {
+	text-align: center;
+}
+
+hr {
+	display: none;
+}
+
+a img {
+	border: none;
+}
+
+.navigation {
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 60px;
+}
+/* End Various Tags & Classes*/
+
+
+/* Default styles overriden for this skin: */
+table.prevnext_post {
+	width: 100%;
+}
+div.bComment, form.bComment {
+	border: none !important;
+}
+form.bComment .submit, form.bComment .preview, .compact_search_form .submit, #content .extended_search_form .submit {
+	border-radius: 0px !important;
+	cursor: pointer;
+	padding: 3px;
+}
+#content .extended_search_form .submit {
+	margin-left: 3px;
+}
