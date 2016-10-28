@@ -6,6 +6,7 @@ Link to skin: http://skins.b2evolution.net/simple-zen-skin
 
 #### v1.1.1
 
+- Removed obsolete skin file
 - New skinshot
 
 #### v1.1.
